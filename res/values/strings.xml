@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--  Application wide -->
+    <string name="app_name">RPoL Notifier</string>
+
+<!--  Loggin Activity -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="showpass">Show Password</string>
+    <string name="loginstatus">NOT LOGGED IN</string>
+    <string name="login">Login</string>
+    <string name="loginfailed">Login failed</string>
+    <string name="loginfailedmessage">The app failed to login unexpectedly.  Clear the apps data and try again.</string>
+    <string name="registrationcomplete">Your device is now registered to receive game 
+        notices.</string>
+    
+    <string name="rpolloggingin">Logging Into RPoL</string>
+    <string name="rpolloggedin">RPoL Logged In</string>
+    <string name="rpolloginfailed">Login to RPoL.net failed</string>
+    <string name="rpolloginfailedmessage">Login failed.  Please verify you Internet connectivity
+        and Username/Password.</string>
+
+    <string name="gcmloggingin">Registering With GCM</string>
+    <string name="gcmloggedin">GCM Registered</string>
+    <string name="gcmloginfailed">GCM Registration Failed</string>
+    <string name="gcmloginfailedmessage">Google Cloud Messaging failed to register your device. 
+        The notification service requires support for Google\'s APIs.  Make sure you have access to 
+        Google Play and Internet connectivity.</string>
+
+    <string name="srvrloggingin">Registering with App Server</string>
+    <string name="srvrloggedin">App Server Registered</string>
+    <string name="srvrloginfailed">Server Registration Failed</string>
+    <string name="srvrloginfailedmessage">Registration with ninthbit\'s notification server failed.  If this
+        problem persists, contact him via RPoL\'s rMail service.</string>
+    
+<!--  Settings Activity -->
+    <string name="action_settings">Notification Settings</string>
+    <string name="title_activity_settings">Notification Settings</string>
+    
+   	<!--  Menu Selections -->
+    <string name="options_purgeports">Clear Portrait Data</string>
+    <string name="options_unregister">Unregister</string>
+    <string name="options_exit">Exit</string>
+    <string name="unregistercomplete">Registration information cleared.</string>
+
+    
+</resources>

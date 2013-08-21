@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    style="@android:style/Theme.Light"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+	<LinearLayout
+	    style="@android:style/Theme.Light"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    >
+	
+	   <ImageView
+	      android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+	      android:adjustViewBounds="true"
+	      android:src="@drawable/logo"
+	      android:contentDescription="@string/app_name"
+	   /> 
+	   <!-- layout for Username & Password -->
+	   <EditText
+	      android:id="@+id/username"
+	      android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+	      android:inputType="text"
+	      android:hint="@string/username"
+	   >
+	      <requestFocus />
+	   </EditText>
+	   <EditText
+	      android:id="@+id/password"
+	      android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+	      android:inputType="textPassword"
+	      android:hint="@string/password"
+	   />
+	   <CheckBox 
+	      android:id="@+id/checkbox_showpass"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:text="@string/showpass"
+	      android:onClick="onClickedCheckboxShowPass"
+	   />
+	
+	<LinearLayout
+	    android:layout_width="fill_parent"
+		android:orientation="horizontal"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+	>
+	   <CheckBox 
+	      android:id="@+id/checkbox_rpol"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+          android:enabled="false"
+          android:focusable="false"
+          android:clickable="false"
+	   />
+		   <CheckBox 
+	      android:id="@+id/checkbox_gcm"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+          android:enabled="false"
+          android:focusable="false"
+          android:clickable="false"
+	   />
+	   	   <CheckBox 
+	      android:id="@+id/checkbox_srvr"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+          android:enabled="false"
+          android:focusable="false"
+          android:clickable="false"
+	   />
+	</LinearLayout>
+
+	   <TextView
+	       android:id="@+id/loginstatus"
+	       android:layout_width="match_parent"
+	       android:layout_height="wrap_content"
+	       android:gravity="center"
+	       android:hint="@string/loginstatus" />
+
+		<Button
+	      android:id="@+id/login"
+	      android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+	      android:text="@string/login"
+	      android:onClick="onClickedButtonLogin"
+	/>
+</LinearLayout>
+</ScrollView>

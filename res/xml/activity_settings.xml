@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceCategory
+        android:key="notify_settings"
+        android:title="General Settings"
+>
+        <CheckBoxPreference 
+            android:key="notify_disabled"
+            android:summary="Disable ALL notifications: AKA, Do Not Disturb"
+            android:title="Disable Notifier" 
+            android:defaultValue="false"
+        />
+        <CheckBoxPreference 
+            android:key="forcebrowserchoice"
+            android:summary="Every notification will present chooser if multiple browsers are installed."
+            android:title="Force Browser Choice" 
+            android:defaultValue="false"
+        />
+        
+</PreferenceCategory>
+
+<PreferenceCategory
+        android:key="publicnote_settings"
+        android:title="Public Notification Settings"
+>
+        <RingtonePreference
+            android:key="notify_tone"
+            android:title="Choose Sound (Public)"
+            android:summary="Select a sound for public messages"
+            android:defaultValue="content://settings/system/notification_sound"
+            android:ringtoneType="all"
+            android:showDefault="true"
+            android:showSilent="true"
+        />
+        <EditTextPreference
+            android:key="adv_ignorelist"
+            android:title="Ignore List"
+            android:summary="List of games to ignore"
+            android:dialogTitle="List of games to ignore"
+            android:dialogMessage="Comma seperated list of numerical game IDs to ignore."
+            android:defaultValue="" 
+        />
+</PreferenceCategory>
+<PreferenceCategory
+        android:key="privatenote_settings"
+        android:title="Private Notification Settings"
+>
+        <RingtonePreference
+            android:key="privatenotify_tone"
+            android:title="Choose Sound (Private)"
+            android:summary="Select a sound for private messages"
+            android:defaultValue="content://settings/system/notification_sound"
+            android:ringtoneType="all"
+            android:showDefault="true"
+            android:showSilent="true"
+        />
+        <EditTextPreference
+            android:key="priv_ignorelist"
+            android:title="Ignore List"
+            android:summary="List of games to ignore"
+            android:dialogTitle="List of games to ignore"
+            android:dialogMessage="Comma seperated list of numerical game IDs to ignore."
+            android:defaultValue="" 
+        />
+</PreferenceCategory>
+
+<PreferenceCategory
+        android:key="vibrate_settings"
+        android:title="Vibration Settings"
+>
+        <CheckBoxPreference 
+            android:key="notify_vib"
+            android:summary="Vibrate with notification"
+            android:title="Vibrate" 
+            android:defaultValue="true"
+        />
+        <EditTextPreference
+            android:key="notify_vibpattern"
+            android:title="Vibrate Pattern"
+            android:summary="Change vibration pattern"
+            android:dialogTitle="Custom Vibrate Pattern"
+            android:dialogMessage="Format off:on in milliseconds: off,on,off,on,...  It can be as simple as 0:500 for a quick buzz, or very involved 0:250:200:250:150:150:75:150:75:150"
+            android:defaultValue="0:500:250:500"
+            android:dependency="notify_vib" />
+        <!--  0:250:200:250:150:150:75:150:75:150 -->
+</PreferenceCategory>
+<PreferenceCategory
+        android:key="led_settings"
+        android:title="LED Settings"
+>
+        <CheckBoxPreference 
+            android:key="notify_led"
+            android:title="Flash LED"
+            android:summary="Flash the notification LED"
+            android:defaultValue="true"
+        />
+
+        <EditTextPreference
+            android:key="notify_ledpattern"
+            android:title="LED Blink Pattern"
+            android:summary="Off and On duration"
+            android:dialogTitle="Custom Blink Pattern"
+            android:dialogMessage="Format off:on in milliseconds: example 200:300"
+            android:defaultValue=""
+            android:enabled="true"
+            android:focusable="true"
+            android:dependency="notify_led"
+         />   
+         <EditTextPreference
+            android:key="notify_ledcolor"
+            android:title="LED Color"
+            android:summary="Hardware support varies"
+            android:dialogTitle="Set LED Color"
+            android:dialogMessage="Enter a hex RGB value.  (Example: ff0000 is red, ff00ff would be purple, or 00ff00 for green.  This setting is dependant on what your hardware can support.  Results may very."
+            android:defaultValue="ffffff"
+            android:enabled="true"
+            android:focusable="true"
+            android:dependency="notify_led"
+         />
+</PreferenceCategory>
+<PreferenceCategory
+        android:key="quiet_settings"
+        android:title="Quiet Hour Settings"
+>
+       
+        <CheckBoxPreference
+            android:key="quiethours_enabled"
+            android:defaultValue="false"
+            android:title="Enable Quiet Hours"
+            android:summary="Notice will post without light, sound, or vibrate"
+        />
+        <com.evilknights.rpolnotifier.TimePickerPreference
+            android:key="quiethours_start"
+            android:title="Quiet Hours Start"
+            android:showDefault="true"
+            android:defaultValue="22:00"
+            android:dialogTitle="Quiet Hours Start"
+            android:dialogMessage="Select when notifications should start being suppressed."
+            android:dependency="quiethours_enabled"
+        />
+        <com.evilknights.rpolnotifier.TimePickerPreference
+            android:key="quiethours_stop"
+            android:title="Quiet Hours Stop"
+            android:showDefault="true"
+            android:defaultValue="6:00"
+            android:dialogTitle="Quiet Hours Stop"
+            android:dialogMessage="Select when notifications should stop being suppressed."
+            android:dependency="quiethours_enabled"
+        />
+        
+</PreferenceCategory>
+
+</PreferenceScreen>
